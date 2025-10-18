@@ -246,8 +246,8 @@ class ERC8004BaseAgent:
             raise ValueError("Agent must be registered first")
         
         print(f"🔍 Requesting validation from agent {validator_agent_id}")
-        
-        function = self.validation_registry.functions.ValidationRequest(
+
+        function = self.validation_registry.functions.validationRequest(
             validator_agent_id,
             self.agent_id,
             data_hash
@@ -287,8 +287,8 @@ class ERC8004BaseAgent:
             raise ValueError("Agent must be registered first")
         
         print(f"📊 Submitting validation response: {response}/100")
-        
-        function = self.validation_registry.functions.ValidationResponse(
+
+        function = self.validation_registry.functions.validationResponse(
             data_hash,
             response
         )
