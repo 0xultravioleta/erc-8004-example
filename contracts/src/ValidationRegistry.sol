@@ -30,6 +30,17 @@ contract ValidationRegistry is IValidationRegistry {
     /// @dev Mapping from data hash to whether a response exists
     mapping(bytes32 => bool) private _hasResponse;
 
+    /// @dev Mapping from (validatorId, serverId) to validator rating (0-100)
+    mapping(uint256 => mapping(uint256 => uint8)) private _validatorRatings;
+
+    /// @dev Mapping from (validatorId, serverId) to whether rating exists
+    mapping(uint256 => mapping(uint256 => bool)) private _hasValidatorRating;
+
+    // ============ Events ============
+
+    /// @dev Emitted when a server rates a validator
+    event ValidatorRated(uint256 indexed validatorId, uint256 indexed serverId, uint8 rating);
+
     // ============ Constructor ============
     
     /**
@@ -128,6 +139,38 @@ contract ValidationRegistry is IValidationRegistry {
         emit ValidationResponseEvent(request.agentValidatorId, request.agentServerId, dataHash, response);
     }
 
+    /**
+     * @dev Allows a server agent to rate a validator's service quality
+     * @param agentValidatorId The validator agent ID
+     * @param rating The rating score (0-100)
+     */
+    function rateValidator(uint256 agentValidatorId, uint8 rating) external {
+        // Validate rating range (0-100)
+        if (rating > 100) {
+            revert InvalidResponse();
+        }
+
+        // Validate that validator exists
+        if (!identityRegistry.agentExists(agentValidatorId)) {
+            revert AgentNotFound();
+        }
+
+        // Get the server agent ID from the caller
+        IIdentityRegistry.AgentInfo memory serverAgent = identityRegistry.resolveByAddress(msg.sender);
+        uint256 agentServerId = serverAgent.agentId;
+
+        // Validate that caller is a registered agent
+        if (agentServerId == 0) {
+            revert AgentNotFound();
+        }
+
+        // Store the rating
+        _validatorRatings[agentValidatorId][agentServerId] = rating;
+        _hasValidatorRating[agentValidatorId][agentServerId] = true;
+
+        emit ValidatorRated(agentValidatorId, agentServerId, rating);
+    }
+
     // ============ Read Functions ============
     
     /**
@@ -169,5 +212,19 @@ contract ValidationRegistry is IValidationRegistry {
      */
     function getExpirationSlots() external pure returns (uint256 slots) {
         return EXPIRATION_SLOTS;
+    }
+
+    /**
+     * @dev Gets the rating a server gave to a validator
+     * @param agentValidatorId The validator agent ID
+     * @param agentServerId The server agent ID
+     * @return hasRating Whether a rating exists
+     * @return rating The rating score (0-100)
+     */
+    function getValidatorRating(uint256 agentValidatorId, uint256 agentServerId) external view returns (bool hasRating, uint8 rating) {
+        hasRating = _hasValidatorRating[agentValidatorId][agentServerId];
+        if (hasRating) {
+            rating = _validatorRatings[agentValidatorId][agentServerId];
+        }
     }
 }

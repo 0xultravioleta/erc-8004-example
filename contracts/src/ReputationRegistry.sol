@@ -22,6 +22,17 @@ contract ReputationRegistry is IReputationRegistry {
     /// @dev Mapping from client-server pair to feedback auth ID
     mapping(uint256 => mapping(uint256 => bytes32)) private _clientServerToAuthId;
 
+    /// @dev Mapping from (clientId, serverId) to client rating (0-100)
+    mapping(uint256 => mapping(uint256 => uint8)) private _clientRatings;
+
+    /// @dev Mapping from (clientId, serverId) to whether rating exists
+    mapping(uint256 => mapping(uint256 => bool)) private _hasClientRating;
+
+    // ============ Events ============
+
+    /// @dev Emitted when a server rates a client
+    event ClientRated(uint256 indexed clientId, uint256 indexed serverId, uint8 rating);
+
     // ============ Constructor ============
     
     /**
@@ -70,6 +81,38 @@ contract ReputationRegistry is IReputationRegistry {
         emit AuthFeedback(agentClientId, agentServerId, feedbackAuthId);
     }
 
+    /**
+     * @dev Allows a server agent to rate a client's quality
+     * @param agentClientId The client agent ID
+     * @param rating The rating score (0-100)
+     */
+    function rateClient(uint256 agentClientId, uint8 rating) external {
+        // Validate rating range (0-100)
+        if (rating > 100) {
+            revert UnauthorizedFeedback();
+        }
+
+        // Validate that client exists
+        if (!identityRegistry.agentExists(agentClientId)) {
+            revert AgentNotFound();
+        }
+
+        // Get the server agent ID from the caller
+        IIdentityRegistry.AgentInfo memory serverAgent = identityRegistry.resolveByAddress(msg.sender);
+        uint256 agentServerId = serverAgent.agentId;
+
+        // Validate that caller is a registered agent
+        if (agentServerId == 0) {
+            revert AgentNotFound();
+        }
+
+        // Store the rating
+        _clientRatings[agentClientId][agentServerId] = rating;
+        _hasClientRating[agentClientId][agentServerId] = true;
+
+        emit ClientRated(agentClientId, agentServerId, rating);
+    }
+
     // ============ Read Functions ============
     
     /**
@@ -93,8 +136,22 @@ contract ReputationRegistry is IReputationRegistry {
         feedbackAuthId = _clientServerToAuthId[agentClientId][agentServerId];
     }
 
+    /**
+     * @dev Gets the rating a server gave to a client
+     * @param agentClientId The client agent ID
+     * @param agentServerId The server agent ID
+     * @return hasRating Whether a rating exists
+     * @return rating The rating score (0-100)
+     */
+    function getClientRating(uint256 agentClientId, uint256 agentServerId) external view returns (bool hasRating, uint8 rating) {
+        hasRating = _hasClientRating[agentClientId][agentServerId];
+        if (hasRating) {
+            rating = _clientRatings[agentClientId][agentServerId];
+        }
+    }
+
     // ============ Internal Functions ============
-    
+
     /**
      * @dev Generates a unique feedback authorization ID
      * @param agentClientId The client agent ID

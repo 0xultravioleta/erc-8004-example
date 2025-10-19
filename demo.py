@@ -257,9 +257,42 @@ def demonstrate_feedback(alice, charlie_id):
         print(f"❌ Feedback authorization failed: {e}")
         return False
 
+def demonstrate_two_way_ratings(alice, bob_id, charlie_id):
+    """Demonstrate two-way rating system"""
+    print("\n⭐ STEP 7: Two-Way Rating System")
+    print("-" * 50)
+
+    try:
+        # Alice rates Bob (the validator)
+        print(f"⭐ Alice rating Bob's validation service...")
+        bob_rating = 95  # Alice gives Bob 95/100 for excellent validation
+        validator_tx = alice.rate_validator(bob_id, bob_rating)
+        print(f"✅ Validator rating submitted!")
+        print(f"   Transaction: {validator_tx}")
+        print(f"   Bob received: {bob_rating}/100 (Excellent validation service)")
+
+        # Alice rates Charlie (the client)
+        print(f"\n⭐ Alice rating Charlie's client quality...")
+        charlie_rating = 98  # Alice gives Charlie 98/100 for being a great client
+        client_tx = alice.rate_client(charlie_id, charlie_rating)
+        print(f"✅ Client rating submitted!")
+        print(f"   Transaction: {client_tx}")
+        print(f"   Charlie received: {charlie_rating}/100 (Excellent client - fast payment, clear communication)")
+
+        print(f"\n🎉 Two-way ratings completed!")
+        print(f"   ✅ Bob (Validator) can now build reputation based on service quality")
+        print(f"   ✅ Charlie (Client) can now build reputation as a good customer")
+        print(f"   ✅ This creates incentives for EVERYONE to behave professionally!")
+
+        return True
+
+    except Exception as e:
+        print(f"❌ Two-way rating failed: {e}")
+        return False
+
 def display_audit_trail(alice, bob, charlie, analysis_package, validation_package):
     """Display the complete audit trail"""
-    print("\n📋 STEP 7: Complete Audit Trail")
+    print("\n📋 STEP 8: Complete Audit Trail")
     print("-" * 50)
     
     print("🔗 BLOCKCHAIN AUDIT TRAIL:")
@@ -291,8 +324,9 @@ def display_audit_trail(alice, bob, charlie, analysis_package, validation_packag
     
     print("🎯 TRUST MODELS DEMONSTRATED:")
     print("   ✅ Identity Registry - Sovereign agent identities")
-    print("   ✅ Reputation Registry - Feedback authorization")
-    print("   ✅ Validation Registry - Cryptoeconomic validation")
+    print("   ✅ Reputation Registry - Feedback authorization & client ratings")
+    print("   ✅ Validation Registry - Cryptoeconomic validation & validator ratings")
+    print("   ✅ Two-Way Ratings - Validators and clients get rated too")
     print("   ✅ AI-Powered Analysis - CrewAI multi-agent workflows")
     print("   ✅ Trustless Verification - Blockchain-based audit trail")
 
@@ -335,7 +369,11 @@ def main():
     # Demonstrate feedback authorization
     if not demonstrate_feedback(alice, charlie_id):
         return 1
-    
+
+    # Demonstrate two-way rating system
+    if not demonstrate_two_way_ratings(alice, bob_id, charlie_id):
+        return 1
+
     # Display complete audit trail
     display_audit_trail(alice, bob, charlie, analysis_package, validation_package)
     
@@ -348,6 +386,8 @@ def main():
     print("• Trustless interactions through ERC-8004 registries")
     print("• Complete blockchain audit trail for accountability")
     print("• Decentralized reputation and validation systems")
+    print("• Two-way ratings: Validators and clients get rated for quality")
+    print("• Fair reputation building for ALL participants in the economy")
     print()
     print("This demonstrates the foundation for a trustless agent economy!")
     print("=" * 80)

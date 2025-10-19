@@ -312,6 +312,98 @@ class ERC8004BaseAgent:
         else:
             raise Exception("Validation response submission failed")
     
+    def rate_validator(self, validator_agent_id: int, rating: int) -> str:
+        """
+        Rate a validator's service quality
+
+        Args:
+            validator_agent_id: The ID of the validator to rate
+            rating: Rating score 0-100
+
+        Returns:
+            Transaction hash
+        """
+        if not self.agent_id:
+            raise ValueError("Agent must be registered first")
+
+        if not 0 <= rating <= 100:
+            raise ValueError("Rating must be between 0 and 100")
+
+        print(f"⭐ Rating validator (Agent {validator_agent_id}): {rating}/100")
+
+        function = self.validation_registry.functions.rateValidator(
+            validator_agent_id,
+            rating
+        )
+
+        # Build and send transaction
+        transaction = function.build_transaction({
+            'from': self.address,
+            'gas': 100000,
+            'gasPrice': self.w3.eth.gas_price,
+            'nonce': self.w3.eth.get_transaction_count(self.address),
+            'chainId': self.w3.eth.chain_id
+        })
+
+        # Sign and send
+        signed_txn = self.w3.eth.account.sign_transaction(transaction, self.private_key)
+        tx_hash = self.w3.eth.send_raw_transaction(signed_txn.raw_transaction)
+
+        # Wait for confirmation
+        receipt = self.w3.eth.wait_for_transaction_receipt(tx_hash)
+
+        if receipt['status'] == 1:
+            print(f"✅ Validator rating submitted successfully")
+            return tx_hash.hex()
+        else:
+            raise Exception("Validator rating transaction failed")
+
+    def rate_client(self, client_agent_id: int, rating: int) -> str:
+        """
+        Rate a client's quality
+
+        Args:
+            client_agent_id: The ID of the client to rate
+            rating: Rating score 0-100
+
+        Returns:
+            Transaction hash
+        """
+        if not self.agent_id:
+            raise ValueError("Agent must be registered first")
+
+        if not 0 <= rating <= 100:
+            raise ValueError("Rating must be between 0 and 100")
+
+        print(f"⭐ Rating client (Agent {client_agent_id}): {rating}/100")
+
+        function = self.reputation_registry.functions.rateClient(
+            client_agent_id,
+            rating
+        )
+
+        # Build and send transaction
+        transaction = function.build_transaction({
+            'from': self.address,
+            'gas': 100000,
+            'gasPrice': self.w3.eth.gas_price,
+            'nonce': self.w3.eth.get_transaction_count(self.address),
+            'chainId': self.w3.eth.chain_id
+        })
+
+        # Sign and send
+        signed_txn = self.w3.eth.account.sign_transaction(transaction, self.private_key)
+        tx_hash = self.w3.eth.send_raw_transaction(signed_txn.raw_transaction)
+
+        # Wait for confirmation
+        receipt = self.w3.eth.wait_for_transaction_receipt(tx_hash)
+
+        if receipt['status'] == 1:
+            print(f"✅ Client rating submitted successfully")
+            return tx_hash.hex()
+        else:
+            raise Exception("Client rating transaction failed")
+
     def get_agent_info(self, agent_id: int) -> Dict[str, Any]:
         """Get information about an agent from the registry"""
         result = self.identity_registry.functions.getAgent(agent_id).call()

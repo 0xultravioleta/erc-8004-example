@@ -41,7 +41,6 @@ services:
       - ./:/app
       - /app/node_modules
       - /app/contracts/lib
-      - /app/contracts/out
     ports:
       - "5173:5173"
     networks:
@@ -49,7 +48,10 @@ services:
     stdin_open: false
     tty: false
     command: >
-      sh -c "rm -f deployment.json data/*.json validations/*.json &&
+      sh -c "cd /app/contracts &&
+             forge build &&
+             cd /app &&
+             rm -f deployment.json data/*.json validations/*.json &&
              echo 'n' | python3 demo.py"
 
   # Frontend dev server (optional - run separately if needed)
