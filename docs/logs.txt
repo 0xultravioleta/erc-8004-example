@@ -1,0 +1,1014 @@
+erc8004-anvil  |     Block Number: 2
+erc8004-anvil  |     Block Hash: 0x3b9c499c99e39a387a0c59ea7aaf67078da528235a6e8a0b3d4507b71b638005
+erc8004-anvil  |     Block Time: "Sun, 19 Oct 2025 22:37:51 +0000"
+erc8004-anvil  | 
+erc8004-anvil  | eth_getTransactionReceipt
+erc8004-anvil  | eth_chainId
+erc8004-anvil  | eth_estimateGas
+erc8004-anvil  | eth_chainId
+erc8004-anvil  | eth_gasPrice
+erc8004-anvil  | eth_getTransactionCount
+erc8004-anvil  | eth_chainId
+erc8004-anvil  | eth_sendRawTransaction
+erc8004-anvil  | 
+erc8004-anvil  |     Transaction: 0x061747ca11468821a907032590b2264948a1e6cefc5fefd07213b3100122c5b5
+erc8004-anvil  |     Contract created: 0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0
+erc8004-anvil  |     Gas used: 728930
+erc8004-anvil  | 
+erc8004-anvil  |     Block Number: 3
+erc8004-anvil  |     Block Hash: 0xc70f544bfdb3ac35217a4067a67ec33299e95f029f65ae4395fb474d5015df4d
+erc8004-anvil  |     Block Time: "Sun, 19 Oct 2025 22:37:51 +0000"
+erc8004-anvil  | 
+erc8004-anvil  | eth_getTransactionReceipt
+erc8004-app    | ✅ Contracts deployed successfully!
+erc8004-app    | 
+erc8004-app    | 🤖 STEP 2: Initializing AI Agents
+erc8004-app    | --------------------------------------------------
+erc8004-app    | 🔧 Initializing Server Agent (Alice)...
+erc8004-anvil  | web3_clientVersion
+erc8004-anvil  | eth_chainId
+erc8004-anvil  | eth_call
+erc8004-anvil  | 
+erc8004-anvil  | RPC request failed:
+erc8004-anvil  |     Request: EthCall(WithOtherFields { inner: TransactionRequest { from: None, to: Some(Call(0x5fbdb2315678afecb367f032d93f642f64180aa3)), gas_price: None, max_fee_per_gas: None, max_priority_fee_per_gas: None, max_fee_per_blob_gas: None, gas: None, value: None, input: TransactionInput { input: None, data: Some(0x0c638107000000000000000000000000f39fd6e51aad88f6f4ce6ab8827279cfffb92266) }, nonce: None, chain_id: None, access_list: None, transaction_type: None, blob_versioned_hashes: None, sidecar: None, authorization_list: None }, other: OtherFields {} }, Some(latest), None, None)
+erc8004-anvil  |     Error: Execution error: execution reverted: custom error 0xe93ba223
+erc8004-anvil  | 
+erc8004-anvil  | eth_chainId
+erc8004-app    | ℹ️  Agent not yet registered: ('0xe93ba223', '0xe93ba223')
+erc8004-app    | 🤖 Server Agent initialized
+erc8004-app    |    Domain: alice.example.com
+erc8004-app    |    Address: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+erc8004-app    | 🔧 Initializing Validator Agent (Bob)...
+erc8004-anvil  | web3_clientVersion
+erc8004-anvil  | eth_chainId
+erc8004-anvil  | eth_call
+erc8004-anvil  | 
+erc8004-anvil  | RPC request failed:
+erc8004-anvil  |     Request: EthCall(WithOtherFields { inner: TransactionRequest { from: None, to: Some(Call(0x5fbdb2315678afecb367f032d93f642f64180aa3)), gas_price: None, max_fee_per_gas: None, max_priority_fee_per_gas: None, max_fee_per_blob_gas: None, gas: None, value: None, input: TransactionInput { input: None, data: Some(0x0c63810700000000000000000000000070997970c51812dc3a010c7d01b50e0d17dc79c8) }, nonce: None, chain_id: None, access_list: None, transaction_type: None, blob_versioned_hashes: None, sidecar: None, authorization_list: None }, other: OtherFields {} }, Some(latest), None, None)
+erc8004-anvil  |     Error: Execution error: execution reverted: custom error 0xe93ba223
+erc8004-anvil  | 
+erc8004-anvil  | eth_chainId
+erc8004-app    | ℹ️  Agent not yet registered: ('0xe93ba223', '0xe93ba223')
+erc8004-app    | 🔍 Validator Agent initialized
+erc8004-app    |    Domain: bob.example.com
+erc8004-app    |    Address: 0x70997970C51812dc3A010C7d01b50e0d17dc79C8
+erc8004-app    | 🔧 Initializing Client Agent (Charlie)...
+erc8004-anvil  | web3_clientVersion
+erc8004-anvil  | eth_chainId
+erc8004-anvil  | eth_call
+erc8004-anvil  | 
+erc8004-anvil  | RPC request failed:
+erc8004-anvil  |     Request: EthCall(WithOtherFields { inner: TransactionRequest { from: None, to: Some(Call(0x5fbdb2315678afecb367f032d93f642f64180aa3)), gas_price: None, max_fee_per_gas: None, max_priority_fee_per_gas: None, max_fee_per_blob_gas: None, gas: None, value: None, input: TransactionInput { input: None, data: Some(0x0c6381070000000000000000000000003c44cdddb6a900fa2b585dd299e03d12fa4293bc) }, nonce: None, chain_id: None, access_list: None, transaction_type: None, blob_versioned_hashes: None, sidecar: None, authorization_list: None }, other: OtherFields {} }, Some(latest), None, None)
+erc8004-anvil  |     Error: Execution error: execution reverted: custom error 0xe93ba223
+erc8004-anvil  | 
+erc8004-anvil  | eth_chainId
+erc8004-app    | ℹ️  Agent not yet registered: ('0xe93ba223', '0xe93ba223')
+erc8004-app    | 
+erc8004-app    | 📝 STEP 3: Registering Agents
+erc8004-app    | --------------------------------------------------
+erc8004-app    | 📝 Registering Alice (Server Agent)...
+erc8004-app    | 📝 Registering agent with domain: alice.example.com
+erc8004-anvil  | eth_chainId
+erc8004-anvil  | eth_estimateGas
+erc8004-anvil  | eth_chainId
+erc8004-anvil  | eth_gasPrice
+erc8004-anvil  | eth_getTransactionCount
+erc8004-anvil  | eth_chainId
+erc8004-anvil  | eth_sendRawTransaction
+erc8004-anvil  | 
+erc8004-anvil  |     Transaction: 0xccf4cf48c8730d047a41666d0ff243d184704843955dc8af3964797d081c79cc
+erc8004-anvil  |     Gas used: 142146
+erc8004-app    |    Transaction hash: ccf4cf48c8730d047a41666d0ff243d184704843955dc8af3964797d081c79cc
+erc8004-anvil  | 
+erc8004-anvil  |     Block Number: 4
+erc8004-anvil  |     Block Hash: 0x56d1b92ee0d2843fd5b7fbaad10e280f797bff61453ad2adbfdeec36ea79b02e
+erc8004-anvil  |     Block Time: "Sun, 19 Oct 2025 22:37:52 +0000"
+erc8004-anvil  | 
+erc8004-anvil  | eth_getTransactionReceipt
+erc8004-app    | ✅ Agent registered successfully with ID: 1 (from events)
+erc8004-app    | 📝 Registering Bob (Validator Agent)...
+erc8004-app    | 📝 Registering agent with domain: bob.example.com
+erc8004-anvil  | eth_chainId
+erc8004-anvil  | eth_estimateGas
+erc8004-anvil  | eth_chainId
+erc8004-anvil  | eth_gasPrice
+erc8004-anvil  | eth_getTransactionCount
+erc8004-anvil  | eth_chainId
+erc8004-anvil  | eth_sendRawTransaction
+erc8004-anvil  | 
+erc8004-anvil  |     Transaction: 0xcc17e354e75388be4f29a74762b10d9ed6c65108e57b77e7e319e3a8e50341c0
+erc8004-anvil  |     Gas used: 142122
+erc8004-anvil  | 
+erc8004-app    |    Transaction hash: cc17e354e75388be4f29a74762b10d9ed6c65108e57b77e7e319e3a8e50341c0
+erc8004-anvil  |     Block Number: 5
+erc8004-anvil  |     Block Hash: 0xbd3f2941f0fab50778611e457267dabfc06ff1e971f404b2c989f336bdd4d4b3
+erc8004-anvil  |     Block Time: "Sun, 19 Oct 2025 22:37:52 +0000"
+erc8004-anvil  | 
+erc8004-anvil  | eth_getTransactionReceipt
+erc8004-app    | ✅ Agent registered successfully with ID: 2 (from events)
+erc8004-app    | 📝 Registering Charlie (Client Agent)...
+erc8004-app    | 📝 Registering agent with domain: charlie.example.com
+erc8004-anvil  | eth_chainId
+erc8004-anvil  | eth_estimateGas
+erc8004-anvil  | eth_chainId
+erc8004-anvil  | eth_gasPrice
+erc8004-anvil  | eth_getTransactionCount
+erc8004-anvil  | eth_chainId
+erc8004-anvil  | eth_sendRawTransaction
+erc8004-anvil  | 
+erc8004-anvil  |     Transaction: 0xb0b5aa7e8ffb0018a2df99c81dc2ea4901b58a25e2a3fa8d4691b4e5d78799d6
+erc8004-anvil  |     Gas used: 142158
+erc8004-anvil  | 
+erc8004-anvil  |     Block Number: 6
+erc8004-anvil  |     Block Hash: 0xb68f345cbed8c2ee0bc51d464ea4a44a00b799f92699bc93d7e933a642f6af2d
+erc8004-anvil  |     Block Time: "Sun, 19 Oct 2025 22:37:52 +0000"
+erc8004-app    |    Transaction hash: b0b5aa7e8ffb0018a2df99c81dc2ea4901b58a25e2a3fa8d4691b4e5d78799d6
+erc8004-anvil  | 
+erc8004-anvil  | eth_getTransactionReceipt
+erc8004-app    | ✅ Agent registered successfully with ID: 3 (from events)
+erc8004-app    | ✅ All agents registered successfully!
+erc8004-app    |    Alice (Server): ID 1
+erc8004-app    |    Bob (Validator): ID 2
+erc8004-app    |    Charlie (Client): ID 3
+erc8004-app    | 
+erc8004-app    | 📊 STEP 4: Market Analysis & Validation Workflow
+erc8004-app    | --------------------------------------------------
+erc8004-app    | 🔍 Alice performing market analysis for BTC...
+erc8004-app    | 📊 Starting market analysis for BTC (1d)
+erc8004-app    | ╭─────────────────────────── Crew Execution Started ───────────────────────────╮
+erc8004-app    | │                                                                              │
+erc8004-app    | │  Crew Execution Started                                                      │
+erc8004-app    | │  Name: crew                                                                  │
+erc8004-app    | │  ID: 7e10d373-0c0b-462e-b6be-54aa13f9947a                                    │
+erc8004-app    | │  Tool Args:                                                                  │
+erc8004-app    | │                                                                              │
+erc8004-app    | │                                                                              │
+erc8004-app    | ╰──────────────────────────────────────────────────────────────────────────────╯
+erc8004-app    | 
+erc8004-app    | 🚀 Crew: crew
+erc8004-app    | └── 📋 Task: c7fafe05-ad16-4bef-9496-dba91bd5c7c3
+erc8004-app    |     Status: Executing Task...╭────────────────────────────── 🤖 Agent Started ──────────────────────────────╮
+erc8004-app    | │                                                                              │
+erc8004-app    | │  Agent: Senior Market Analyst                                                │
+erc8004-app    | │                                                                              │
+erc8004-app    | │  Task:                                                                       │
+erc8004-app    | │              Perform a comprehensive market analysis for BTC with the        │
+erc8004-app    | │  following requirements:                                                     │
+erc8004-app    | │                                                                              │
+erc8004-app    | │              1. Analyze the current price trend and momentum                 │
+erc8004-app    | │              2. Identify key support and resistance levels                   │
+erc8004-app    | │              3. Provide a clear trading recommendation (BUY/SELL/HOLD)       │
+erc8004-app    | │              4. Assess the risk level of the current market conditions       │
+erc8004-app    | │              5. Include confidence level in your analysis                    │
+erc8004-app    | │                                                                              │
+erc8004-app    | │              Use the market_analysis tool to gather the necessary data.      │
+erc8004-app    | │              Present your findings in a clear, structured format.            │
+erc8004-app    | │                                                                              │
+erc8004-app    | │                                                                              │
+erc8004-app    | ╰──────────────────────────────────────────────────────────────────────────────╯
+erc8004-app    | 
+erc8004-app    | 🚀 Crew: crew
+erc8004-app    | └── 📋 Task: c7fafe05-ad16-4bef-9496-dba91bd5c7c3
+erc8004-app    |     Status: Executing Task...
+erc8004-app    |     └── 🔧 Used market_analysis (1)╭────────────────────────── 🔧 Agent Tool Execution ───────────────────────────╮
+erc8004-app    | │                                                                              │
+erc8004-app    | │  Agent: Senior Market Analyst                                                │
+erc8004-app    | │                                                                              │
+erc8004-app    | │  Thought: Action: market_analysis                                            │
+erc8004-app    | │                                                                              │
+erc8004-app    | │  Using Tool: market_analysis                                                 │
+erc8004-app    | │                                                                              │
+erc8004-app    | ╰──────────────────────────────────────────────────────────────────────────────╯
+erc8004-app    | ╭───────────────────────────────── Tool Input ─────────────────────────────────╮
+erc8004-app    | │                                                                              │
+erc8004-app    | │  {                                                                           │
+erc8004-app    | │    "symbol": "BTC",                                                          │
+erc8004-app    | │    "timeframe": "1d"                                                         │
+erc8004-app    | │  }                                                                           │
+erc8004-app    | │                                                                              │
+erc8004-app    | ╰──────────────────────────────────────────────────────────────────────────────╯
+erc8004-app    | ╭──────────────────────────────── Tool Output ─────────────────────────────────╮
+erc8004-app    | │                                                                              │
+erc8004-app    | │  {                                                                           │
+erc8004-app    | │    "symbol": "BTC",                                                          │
+erc8004-app    | │    "timeframe": "1d",                                                        │
+erc8004-app    | │    "price_trend": "bearish",                                                 │
+erc8004-app    | │    "confidence": 85,                                                         │
+erc8004-app    | │    "key_levels": {                                                           │
+erc8004-app    | │      "support": 45000,                                                       │
+erc8004-app    | │      "resistance": 52000                                                     │
+erc8004-app    | │    },                                                                        │
+erc8004-app    | │    "recommendation": "HOLD",                                                 │
+erc8004-app    | │    "risk_level": "medium"                                                    │
+erc8004-app    | │  }                                                                           │
+erc8004-app    | │                                                                              │
+erc8004-app    | ╰──────────────────────────────────────────────────────────────────────────────╯
+erc8004-app    | 
+erc8004-anvil  | web3_clientVersion
+erc8004-app    | 🚀 Crew: crew
+erc8004-app    | └── 📋 Task: c7fafe05-ad16-4bef-9496-dba91bd5c7c3
+erc8004-app    |     Status: Executing Task...
+erc8004-app    |     └── 🔧 Used market_analysis (1)╭─────────────────────────── ✅ Agent Final Answer ────────────────────────────╮
+erc8004-app    | │                                                                              │
+erc8004-app    | │  Agent: Senior Market Analyst                                                │
+erc8004-app    | │                                                                              │
+erc8004-app    | │  Final Answer:                                                               │
+erc8004-app    | │  Market Analysis Report for BTC                                              │
+erc8004-app    | │                                                                              │
+erc8004-app    | │  1. **Current Price Trend and Momentum**                                     │
+erc8004-app    | │     - The current price trend for BTC is bearish, indicating a downward      │
+erc8004-app    | │  movement in price momentum over the analyzed timeframe (1 day).             │
+erc8004-app    | │                                                                              │
+erc8004-app    | │  2. **Key Support and Resistance Levels**                                    │
+erc8004-app    | │     - **Support Level:** 45000                                               │
+erc8004-app    | │     - **Resistance Level:** 52000                                            │
+erc8004-app    | │     These levels represent significant points where the price may halt or    │
+erc8004-app    | │  reverse its current trend.                                                  │
+erc8004-app    | │                                                                              │
+erc8004-app    | │  3. **Trading Recommendation**                                               │
+erc8004-app    | │     - Based on the current analysis, the recommended action is to **HOLD**.  │
+erc8004-app    | │  This suggests that it may not be a favorable time to buy or sell.           │
+erc8004-app    | │                                                                              │
+erc8004-app    | │  4. **Risk Level Assessment**                                                │
+erc8004-app    | │     - The risk level of the current market conditions is assessed as         │
+erc8004-app    | │  **medium**, implying that there are moderate risks associated with trading  │
+erc8004-app    | │  BTC at this time.                                                           │
+erc8004-app    | │                                                                              │
+erc8004-app    | │  5. **Confidence Level**                                                     │
+erc8004-app    | │     - The confidence level in this analysis is **85%**, indicating a high    │
+erc8004-app    | │  level of certainty in the observed trends and recommendations.              │
+erc8004-app    | │                                                                              │
+erc8004-app    | ╰──────────────────────────────────────────────────────────────────────────────╯
+erc8004-app    | 
+erc8004-app    | 🚀 Crew: crew
+erc8004-app    | └── 📋 Task: c7fafe05-ad16-4bef-9496-dba91bd5c7c3
+erc8004-app    |     Assigned to: Senior Market Analyst
+erc8004-app    |     Status: ✅ Completed
+erc8004-app    |     └── 🔧 Used market_analysis (1)╭────────────────────────────── Task Completion ───────────────────────────────╮
+erc8004-app    | │                                                                              │
+erc8004-app    | │  Task Completed                                                              │
+erc8004-app    | │  Name: c7fafe05-ad16-4bef-9496-dba91bd5c7c3                                  │
+erc8004-app    | │  Agent: Senior Market Analyst                                                │
+erc8004-app    | │  Tool Args:                                                                  │
+erc8004-app    | │                                                                              │
+erc8004-app    | │                                                                              │
+erc8004-app    | ╰──────────────────────────────────────────────────────────────────────────────╯
+erc8004-app    | 
+erc8004-app    | 🚀 Crew: crew
+erc8004-app    | ├── 📋 Task: c7fafe05-ad16-4bef-9496-dba91bd5c7c3
+erc8004-app    | │   Assigned to: Senior Market Analyst
+erc8004-app    | │   Status: ✅ Completed
+erc8004-app    | │   └── 🔧 Used market_analysis (1)
+erc8004-app    | └── 📋 Task: c8d16f09-6c4c-4d85-9e19-bb3824386eb0
+erc8004-app    |     Status: Executing Task...╭────────────────────────────── 🤖 Agent Started ──────────────────────────────╮
+erc8004-app    | │                                                                              │
+erc8004-app    | │  Agent: Risk Assessment Specialist                                           │
+erc8004-app    | │                                                                              │
+erc8004-app    | │  Task:                                                                       │
+erc8004-app    | │              Review the market analysis report for BTC and provide:          │
+erc8004-app    | │                                                                              │
+erc8004-app    | │              1. Validation of the analysis methodology                       │
+erc8004-app    | │              2. Assessment of risk factors and warnings                      │
+erc8004-app    | │              3. Confirmation or adjustment of the confidence level           │
+erc8004-app    | │              4. Final recommendation with risk disclaimer                    │
+erc8004-app    | │                                                                              │
+erc8004-app    | │              Ensure the analysis meets professional standards and includes   │
+erc8004-app    | │  appropriate risk warnings.                                                  │
+erc8004-app    | │                                                                              │
+erc8004-app    | │                                                                              │
+erc8004-app    | ╰──────────────────────────────────────────────────────────────────────────────╯
+erc8004-app    | 
+erc8004-anvil  | web3_clientVersion
+erc8004-app    | 🚀 Crew: crew
+erc8004-app    | ├── 📋 Task: c7fafe05-ad16-4bef-9496-dba91bd5c7c3
+erc8004-app    | │   Assigned to: Senior Market Analyst
+erc8004-app    | │   Status: ✅ Completed
+erc8004-app    | │   └── 🔧 Used market_analysis (1)
+erc8004-app    | └── 📋 Task: c8d16f09-6c4c-4d85-9e19-bb3824386eb0
+erc8004-app    |     Status: Executing Task...╭─────────────────────────── ✅ Agent Final Answer ────────────────────────────╮
+erc8004-app    | │                                                                              │
+erc8004-app    | │  Agent: Risk Assessment Specialist                                           │
+erc8004-app    | │                                                                              │
+erc8004-app    | │  Final Answer:                                                               │
+erc8004-app    | │  **Market Analysis Report for BTC – Review and Validation**                  │
+erc8004-app    | │                                                                              │
+erc8004-app    | │  1. **Validation of the Analysis Methodology**                               │
+erc8004-app    | │     The methodology employed in the market analysis report for BTC reflects  │
+erc8004-app    | │  a sound approach. The analysis utilizes recent price trends, identifies     │
+erc8004-app    | │  key support and resistance levels, assesses market sentiment, and           │
+erc8004-app    | │  evaluates historical data. The choice to analyze the price movement over a  │
+erc8004-app    | │  1-day timeframe is fitting for short-term trading strategies. However, to   │
+erc8004-app    | │  further substantiate the analysis, incorporating additional timeframes      │
+erc8004-app    | │  (e.g., weekly or monthly) could provide a broader perspective on price      │
+erc8004-app    | │  movements and market sentiment.                                             │
+erc8004-app    | │                                                                              │
+erc8004-app    | │  2. **Assessment of Risk Factors and Warnings**                              │
+erc8004-app    | │     - **Market Volatility:** The cryptocurrency market, particularly BTC,    │
+erc8004-app    | │  is subject to significant volatility, which can result in rapid price       │
+erc8004-app    | │  fluctuations. This inherently increases risk for traders.                   │
+erc8004-app    | │     - **Liquidity Risk:** The assessment must factor in liquidity            │
+erc8004-app    | │  conditions, as low liquidity can exacerbate price changes and impact        │
+erc8004-app    | │  execution of trades.                                                        │
+erc8004-app    | │     - **Regulatory Risks:** Potential regulatory changes impacting           │
+erc8004-app    | │  cryptocurrencies can create uncertainty and affect market stability.        │
+erc8004-app    | │     - **Market Sentiment:** External news events and public sentiment can    │
+erc8004-app    | │  have immediate effects on BTC pricing, creating risks beyond traditional    │
+erc8004-app    | │  financial indicators.                                                       │
+erc8004-app    | │     - **Technical Analysis Limitations:** Relying heavily on technical       │
+erc8004-app    | │  indicators may not always capture fundamental shifts in the market, thus    │
+erc8004-app    | │  presenting additional risks.                                                │
+erc8004-app    | │                                                                              │
+erc8004-app    | │     In summary, the medium-risk level accurately captures these factors but  │
+erc8004-app    | │  should be highlighted in the report.                                        │
+erc8004-app    | │                                                                              │
+erc8004-app    | │  3. **Confirmation or Adjustment of the Confidence Level**                   │
+erc8004-app    | │     The assigned confidence level of 85% is indicative of a strong degree    │
+erc8004-app    | │  of certainty based on the data presented. However, considering the          │
+erc8004-app    | │  potential volatility and rapid shifts in market sentiment, a slight         │
+erc8004-app    | │  adjustment to 80% could more appropriately reflect the inherent             │
+erc8004-app    | │  uncertainties in cryptocurrency trading. The high confidence in observed    │
+erc8004-app    | │  trends justifies a fairly optimistic approach but should also accommodate   │
+erc8004-app    | │  the realities of market unpredictability.                                   │
+erc8004-app    | │                                                                              │
+erc8004-app    | │  4. **Final Recommendation with Risk Disclaimer**                            │
+erc8004-app    | │     Based on the review of the current price trend, key support and          │
+erc8004-app    | │  resistance levels, risk assessment, and confidence level adjustment, I      │
+erc8004-app    | │  recommend maintaining the **HOLD** position on BTC. This recommendation     │
+erc8004-app    | │  suggests that it may be prudent to refrain from making new trades at this   │
+erc8004-app    | │  moment.                                                                     │
+erc8004-app    | │                                                                              │
+erc8004-app    | │     **Risk Disclaimer:** Investors should be aware that trading              │
+erc8004-app    | │  cryptocurrencies carries significant risks and can result in substantial    │
+erc8004-app    | │  losses. This analysis reflects current market conditions; changes can       │
+erc8004-app    | │  occur rapidly and may affect previous conclusions. Before making any        │
+erc8004-app    | │  trading decisions, investors should conduct their own thorough research     │
+erc8004-app    | │  and consider their risk tolerance.                                          │
+erc8004-app    | │                                                                              │
+erc8004-app    | ╰──────────────────────────────────────────────────────────────────────────────╯
+erc8004-app    | 
+erc8004-app    | 🚀 Crew: crew
+erc8004-app    | ├── 📋 Task: c7fafe05-ad16-4bef-9496-dba91bd5c7c3
+erc8004-app    | │   Assigned to: Senior Market Analyst
+erc8004-app    | │   Status: ✅ Completed
+erc8004-app    | │   └── 🔧 Used market_analysis (1)
+erc8004-app    | └── 📋 Task: c8d16f09-6c4c-4d85-9e19-bb3824386eb0
+erc8004-app    |     Assigned to: Risk Assessment Specialist
+erc8004-app    |     Status: ✅ Completed╭────────────────────────────── Task Completion ───────────────────────────────╮
+erc8004-app    | │                                                                              │
+erc8004-app    | │  Task Completed                                                              │
+erc8004-app    | │  Name: c8d16f09-6c4c-4d85-9e19-bb3824386eb0                                  │
+erc8004-app    | │  Agent: Risk Assessment Specialist                                           │
+erc8004-app    | │  Tool Args:                                                                  │
+erc8004-app    | │                                                                              │
+erc8004-app    | │                                                                              │
+erc8004-app    | ╰──────────────────────────────────────────────────────────────────────────────╯
+erc8004-app    | 
+erc8004-app    | ╭────────────────────────────── Crew Completion ───────────────────────────────╮
+erc8004-app    | │                                                                              │
+erc8004-app    | │  Crew Execution Completed                                                    │
+erc8004-app    | │  Name: crew                                                                  │
+erc8004-app    | │  ID: 7e10d373-0c0b-462e-b6be-54aa13f9947a                                    │
+erc8004-app    | │  Tool Args:                                                                  │
+erc8004-app    | │  Final Output: **Market Analysis Report for BTC – Review and Validation**    │
+erc8004-app    | │                                                                              │
+erc8004-app    | │  1. **Validation of the Analysis Methodology**                               │
+erc8004-app    | │     The methodology employed in the market analysis report for BTC reflects  │
+erc8004-app    | │  a sound approach. The analysis utilizes recent price trends, identifies     │
+erc8004-app    | │  key support and resistance levels, assesses market sentiment, and           │
+erc8004-app    | │  evaluates historical data. The choice to analyze the price movement over a  │
+erc8004-app    | │  1-day timeframe is fitting for short-term trading strategies. However, to   │
+erc8004-app    | │  further substantiate the analysis, incorporating additional timeframes      │
+erc8004-app    | │  (e.g., weekly or monthly) could provide a broader perspective on price      │
+erc8004-app    | │  movements and market sentiment.                                             │
+erc8004-app    | │                                                                              │
+erc8004-app    | │  2. **Assessment of Risk Factors and Warnings**                              │
+erc8004-app    | │     - **Market Volatility:** The cryptocurrency market, particularly BTC,    │
+erc8004-app    | │  is subject to significant volatility, which can result in rapid price       │
+erc8004-app    | │  fluctuations. This inherently increases risk for traders.                   │
+erc8004-app    | │     - **Liquidity Risk:** The assessment must factor in liquidity            │
+erc8004-app    | │  conditions, as low liquidity can exacerbate price changes and impact        │
+erc8004-app    | │  execution of trades.                                                        │
+erc8004-app    | │     - **Regulatory Risks:** Potential regulatory changes impacting           │
+erc8004-app    | │  cryptocurrencies can create uncertainty and affect market stability.        │
+erc8004-app    | │     - **Market Sentiment:** External news events and public sentiment can    │
+erc8004-app    | │  have immediate effects on BTC pricing, creating risks beyond traditional    │
+erc8004-app    | │  financial indicators.                                                       │
+erc8004-app    | │     - **Technical Analysis Limitations:** Relying heavily on technical       │
+erc8004-app    | │  indicators may not always capture fundamental shifts in the market, thus    │
+erc8004-app    | │  presenting additional risks.                                                │
+erc8004-app    | │                                                                              │
+erc8004-app    | │     In summary, the medium-risk level accurately captures these factors but  │
+erc8004-app    | │  should be highlighted in the report.                                        │
+erc8004-app    | │                                                                              │
+erc8004-app    | │  3. **Confirmation or Adjustment of the Confidence Level**                   │
+erc8004-app    | │     The assigned confidence level of 85% is indicative of a strong degree    │
+erc8004-app    | │  of certainty based on the data presented. However, considering the          │
+erc8004-app    | │  potential volatility and rapid shifts in market sentiment, a slight         │
+erc8004-app    | │  adjustment to 80% could more appropriately reflect the inherent             │
+erc8004-app    | │  uncertainties in cryptocurrency trading. The high confidence in observed    │
+erc8004-app    | │  trends justifies a fairly optimistic approach but should also accommodate   │
+erc8004-app    | │  the realities of market unpredictability.                                   │
+erc8004-app    | │                                                                              │
+erc8004-app    | │  4. **Final Recommendation with Risk Disclaimer**                            │
+erc8004-app    | │     Based on the review of the current price trend, key support and          │
+erc8004-app    | │  resistance levels, risk assessment, and confidence level adjustment, I      │
+erc8004-app    | │  recommend maintaining the **HOLD** position on BTC. This recommendation     │
+erc8004-app    | │  suggests that it may be prudent to refrain from making new trades at this   │
+erc8004-app    | │  moment.                                                                     │
+erc8004-app    | │                                                                              │
+erc8004-app    | │     **Risk Disclaimer:** Investors should be aware that trading              │
+erc8004-app    | │  cryptocurrencies carries significant risks and can result in substantial    │
+erc8004-app    | │  losses. This analysis reflects current market conditions; changes can       │
+erc8004-app    | │  occur rapidly and may affect previous conclusions. Before making any        │
+erc8004-app    | │  trading decisions, investors should conduct their own thorough research     │
+erc8004-anvil  | eth_getBlockByNumber
+erc8004-app    | │  and consider their risk tolerance.                                          │
+erc8004-app    | │                                                                              │
+erc8004-app    | │                                                                              │
+erc8004-app    | ╰──────────────────────────────────────────────────────────────────────────────╯
+erc8004-app    | 
+erc8004-app    | 
+erc8004-app    | 
+erc8004-app    | ╭────────────────────────────── Execution Traces ──────────────────────────────╮
+erc8004-app    | │                                                                              │
+erc8004-app    | │  🔍 Detailed execution traces are available!                                 │
+erc8004-app    | │                                                                              │
+erc8004-app    | │  View insights including:                                                    │
+erc8004-app    | │    • Agent decision-making process                                           │
+erc8004-app    | │    • Task execution flow and timing                                          │
+erc8004-app    | │    • Tool usage details                                                      │
+erc8004-app    | │                                                                              │
+erc8004-app    | ╰──────────────────────────────────────────────────────────────────────────────╯
+erc8004-app    | Would you like to view your execution traces? [y/N] (20s timeout): ✅ Market analysis completed for BTC
+erc8004-app    | ✅ Analysis completed!
+erc8004-app    |    Symbol: BTC
+erc8004-app    |    Timestamp: 1760913472
+erc8004-app    |    Method: CrewAI Multi-Agent Analysis
+erc8004-app    | 
+erc8004-app    | 📤 Alice requesting validation from Bob (Agent 2)...
+erc8004-app    | 📤 Submitting work for validation
+erc8004-app    |    Data hash: aa9490789318f3dc253ea13d94719c4b8469e1c92c0a1fe976910bf3aa538c5c
+erc8004-app    |    Validator: Agent 2
+erc8004-app    | 💾 Analysis package stored: data/aa9490789318f3dc253ea13d94719c4b8469e1c92c0a1fe976910bf3aa538c5c.json
+erc8004-app    | 🔍 Requesting validation from agent 2
+erc8004-anvil  | eth_gasPrice
+erc8004-anvil  | eth_getTransactionCount
+erc8004-anvil  | eth_chainId
+erc8004-anvil  | eth_sendRawTransaction
+erc8004-anvil  | 
+erc8004-anvil  |     Transaction: 0xf84f0e2ba33366d02c899a89f560d159d5080a496b5b84643bc3128ead789a49
+erc8004-anvil  |     Gas used: 123448
+erc8004-anvil  | 
+erc8004-anvil  |     Block Number: 7
+erc8004-anvil  |     Block Hash: 0xe2b274ac87fed3f33c11bf36dd5ecc52a33282741ba67e62ef5695222a116ced
+erc8004-anvil  |     Block Time: "Sun, 19 Oct 2025 22:38:00 +0000"
+erc8004-anvil  | 
+erc8004-anvil  | eth_getTransactionReceipt
+erc8004-app    | ✅ Validation request successful
+erc8004-app    | ✅ Validation request submitted!
+erc8004-app    |    Transaction: f84f0e2ba33366d02c899a89f560d159d5080a496b5b84643bc3128ead789a49
+erc8004-app    | 
+erc8004-app    | ⏳ Waiting for blockchain confirmation...
+erc8004-anvil  | web3_clientVersion
+erc8004-app    | 
+erc8004-app    | 🔍 STEP 5: AI-Powered Validation
+erc8004-app    | --------------------------------------------------
+erc8004-app    | 🔍 Bob validating analysis (hash: aa9490789318f3dc...)...
+erc8004-app    | 🔍 Starting validation for data hash: aa9490789318f3dc253ea13d94719c4b8469e1c92c0a1fe976910bf3aa538c5c
+erc8004-app    | ╭─────────────────────────── Crew Execution Started ───────────────────────────╮
+erc8004-app    | │                                                                              │
+erc8004-app    | │  Crew Execution Started                                                      │
+erc8004-app    | │  Name: crew                                                                  │
+erc8004-app    | │  ID: 2c6a0168-db09-4b44-b29d-a3368612195d                                    │
+erc8004-app    | │  Tool Args:                                                                  │
+erc8004-app    | │                                                                              │
+erc8004-app    | │                                                                              │
+erc8004-app    | ╰──────────────────────────────────────────────────────────────────────────────╯
+erc8004-app    | 
+erc8004-app    | 🚀 Crew: crew
+erc8004-app    | └── 📋 Task: f03e58a8-e120-4ad4-9ceb-19f16b2413f9
+erc8004-app    |     Status: Executing Task...╭────────────────────────────── 🤖 Agent Started ──────────────────────────────╮
+erc8004-app    | │                                                                              │
+erc8004-app    | │  Agent: Senior Analysis Validator                                            │
+erc8004-app    | │                                                                              │
+erc8004-app    | │  Task:                                                                       │
+erc8004-app    | │              Validate the market analysis package with the following         │
+erc8004-app    | │  criteria:                                                                   │
+erc8004-app    | │                                                                              │
+erc8004-app    | │              1. **Completeness**: Check if all required fields and           │
+erc8004-app    | │  components are present                                                      │
+erc8004-app    | │              2. **Methodology**: Assess the analysis methodology and         │
+erc8004-app    | │  approach                                                                    │
+erc8004-app    | │              3. **Accuracy**: Evaluate the logical consistency of the        │
+erc8004-app    | │  analysis                                                                    │
+erc8004-app    | │              4. **Risk Assessment**: Verify appropriate risk warnings and    │
+erc8004-app    | │  disclaimers                                                                 │
+erc8004-app    | │              5. **Professional Standards**: Ensure the analysis meets        │
+erc8004-app    | │  industry standards                                                          │
+erc8004-app    | │                                                                              │
+erc8004-app    | │              Use the validation_analysis tool to perform systematic checks.  │
+erc8004-app    | │              Provide specific feedback on strengths and areas for            │
+erc8004-app    | │  improvement.                                                                │
+erc8004-app    | │                                                                              │
+erc8004-app    | │              Analysis to validate: {                                         │
+erc8004-app    | │    "symbol": "BTC",                                                          │
+erc8004-app    | │    "timeframe": "1d",                                                        │
+erc8004-app    | │    "timestamp": 1760913472,                                                  │
+erc8004-app    | │    "agent_id": 1,                                                            │
+erc8004-app    | │    "agent_domain": "alice.example.com",                                      │
+erc8004-app    | │    "analysis": "**Market Analysis Report for BTC \u2013 Review and           │
+erc8004-app    | │  Validation**\n\n1. **Validation of the Analysis Methodology**  \n   The     │
+erc8004-app    | │  methodology employed in the market analysis report for BTC reflects a       │
+erc8004-app    | │  sound approach. The analysis utilizes recent price trends, identifies key   │
+erc8004-app    | │  support and resistance levels, assesses market sentiment, and evaluates     │
+erc8004-app    | │  historical data. The choice to analyze the price movement over a 1-day      │
+erc8004-app    | │  timeframe is fitting for short-term trading strategies. However, to         │
+erc8004-app    | │  further substantiate the analysis, incorporating additional timeframes      │
+erc8004-app    | │  (e.g., weekly or monthly) could provide a broader perspective on price      │
+erc8004-app    | │  movements and market sentiment.\n\n2. **Assessment of Risk Factors and      │
+erc8004-app    | │  Warnings**  \n   - **Market Volatility:** The cryptocurrency market,        │
+erc8004-app    | │  particularly BTC, is subject to significant volatility, which can result    │
+erc8004-app    | │  in rapid price fluctuations. This inherently increases risk for traders.\n  │
+erc8004-app    | │  - **Liquidity Risk:** The assessment must factor in liquidity conditions,   │
+erc8004-app    | │  as low liquidity can exacerbate price changes and impact execution of       │
+erc8004-app    | │  trades.\n   - **Regulatory Risks:** Potential regulatory changes impacting  │
+erc8004-app    | │  cryptocurrencies can create uncertainty and affect market stability.\n   -  │
+erc8004-app    | │  **Market Sentiment:** External news events and public sentiment can have    │
+erc8004-app    | │  immediate effects on BTC pricing, creating risks beyond traditional         │
+erc8004-app    | │  financial indicators.\n   - **Technical Analysis Limitations:** Relying     │
+erc8004-app    | │  heavily on technical indicators may not always capture fundamental shifts   │
+erc8004-app    | │  in the market, thus presenting additional risks. \n\n   In summary, the     │
+erc8004-app    | │  medium-risk level accurately captures these factors but should be           │
+erc8004-app    | │  highlighted in the report. \n\n3. **Confirmation or Adjustment of the       │
+erc8004-app    | │  Confidence Level**  \n   The assigned confidence level of 85% is            │
+erc8004-app    | │  indicative of a strong degree of certainty based on the data presented.     │
+erc8004-app    | │  However, considering the potential volatility and rapid shifts in market    │
+erc8004-app    | │  sentiment, a slight adjustment to 80% could more appropriately reflect the  │
+erc8004-app    | │  inherent uncertainties in cryptocurrency trading. The high confidence in    │
+erc8004-app    | │  observed trends justifies a fairly optimistic approach but should also      │
+erc8004-app    | │  accommodate the realities of market unpredictability.\n\n4. **Final         │
+erc8004-app    | │  Recommendation with Risk Disclaimer**  \n   Based on the review of the      │
+erc8004-app    | │  current price trend, key support and resistance levels, risk assessment,    │
+erc8004-app    | │  and confidence level adjustment, I recommend maintaining the **HOLD**       │
+erc8004-app    | │  position on BTC. This recommendation suggests that it may be prudent to     │
+erc8004-app    | │  refrain from making new trades at this moment. \n\n   **Risk Disclaimer:**  │
+erc8004-app    | │  Investors should be aware that trading cryptocurrencies carries             │
+erc8004-app    | │  significant risks and can result in substantial losses. This analysis       │
+erc8004-app    | │  reflects current market conditions; changes can occur rapidly and may       │
+erc8004-app    | │  affect previous conclusions. Before making any trading decisions,           │
+erc8004-app    | │  investors should conduct their own thorough research and consider their     │
+erc8004-app    | │  risk tolerance.",                                                           │
+erc8004-app    | │    "metadata": {                                                             │
+erc8004-app    | │      "crew_agents": 2,                                                       │
+erc8004-app    | │      "tasks_completed": 2,                                                   │
+erc8004-app    | │      "analysis_method": "CrewAI Multi-Agent Analysis"                        │
+erc8004-app    | │    }                                                                         │
+erc8004-app    | │  }                                                                           │
+erc8004-app    | │                                                                              │
+erc8004-app    | │                                                                              │
+erc8004-app    | ╰──────────────────────────────────────────────────────────────────────────────╯
+erc8004-app    | 
+erc8004-anvil  | web3_clientVersion
+erc8004-anvil  | web3_clientVersion
+erc8004-app    | 🚀 Crew: crew
+erc8004-app    | └── 📋 Task: f03e58a8-e120-4ad4-9ceb-19f16b2413f9
+erc8004-app    |     Status: Executing Task...
+erc8004-app    |     └── 🔧 Used validation_analysis (1)╭────────────────────────── 🔧 Agent Tool Execution ───────────────────────────╮
+erc8004-app    | │                                                                              │
+erc8004-app    | │  Agent: Senior Analysis Validator                                            │
+erc8004-app    | │                                                                              │
+erc8004-app    | │  Thought: I need to validate the market analysis report using the specified  │
+erc8004-app    | │  criteria. I will begin with a systematic check for completeness,            │
+erc8004-app    | │  methodology, accuracy, risk assessment, and professional standards.         │
+erc8004-app    | │                                                                              │
+erc8004-app    | │  Using Tool: validation_analysis                                             │
+erc8004-app    | │                                                                              │
+erc8004-app    | ╰──────────────────────────────────────────────────────────────────────────────╯
+erc8004-app    | ╭───────────────────────────────── Tool Input ─────────────────────────────────╮
+erc8004-app    | │                                                                              │
+erc8004-app    | │  {                                                                           │
+erc8004-app    | │    "analysis_data": "{\"symbol\": \"BTC\", \"timeframe\": \"1d\",            │
+erc8004-app    | │  \"timestamp\": 1760913472, \"agent_id\": 1, \"agent_domain\":               │
+erc8004-app    | │  \"alice.example.com\", \"analysis\": \"**Market Analysis Report for BTC –   │
+erc8004-app    | │  Review and Validation**\\n\\n1. **Validation of the Analysis Methodology**  │
+erc8004-app    | │  \\n   The methodology employed in the market analysis report for BTC        │
+erc8004-app    | │  reflects a sound approach. The analysis utilizes recent price trends,       │
+erc8004-app    | │  identifies key support and resistance levels, assesses market sentiment,    │
+erc8004-app    | │  and evaluates historical data. The choice to analyze the price movement     │
+erc8004-app    | │  over a 1-day timeframe is fitting for short-term trading strategies.        │
+erc8004-app    | │  However, to further substantiate the analysis, incorporating additional     │
+erc8004-app    | │  timeframes (e.g., weekly or monthly) could provide a broader perspective    │
+erc8004-app    | │  on price movements and market sentiment.\\n\\n2. **Assessment of Risk       │
+erc8004-app    | │  Factors and Warnings**  \\n   - **Market Volatility:** The cryptocurrency   │
+erc8004-app    | │  market, particularly BTC, is subject to significant volatility, which can   │
+erc8004-app    | │  result in rapid price fluctuations. This inherently increases risk for      │
+erc8004-app    | │  traders.\\n   - **Liquidity Risk:** The assessment must factor in           │
+erc8004-app    | │  liquidity conditions, as low liquidity can exacerbate price changes and     │
+erc8004-app    | │  impact execution of trades.\\n   - **Regulatory Risks:** Potential          │
+erc8004-app    | │  regulatory changes impacting cryptocurrencies can create uncertainty and    │
+erc8004-app    | │  affect market stability.\\n   - **Market Sentiment:** External news events  │
+erc8004-app    | │  and public sentiment can have immediate effects on BTC pricing, creating    │
+erc8004-app    | │  risks beyond traditional financial indicators.\\n   - **Technical Analysis  │
+erc8004-app    | │  Limitations:** Relying heavily on technical indicators may not always       │
+erc8004-app    | │  capture fundamental shifts in the market, thus presenting additional        │
+erc8004-app    | │  risks. \\n\\n   In summary, the medium-risk level accurately captures       │
+erc8004-app    | │  these factors but should be highlighted in the report. \\n\\n3.             │
+erc8004-app    | │  **Confirmation or Adjustment of the Confidence Level**  \\n   The assigned  │
+erc8004-app    | │  confidence level of 85% is indicative of a strong degree of certainty       │
+erc8004-app    | │  based on the data presented. However, considering the potential volatility  │
+erc8004-app    | │  and rapid shifts in market sentiment, a slight adjustment to 80% could      │
+erc8004-app    | │  more appropriately reflect the inherent uncertainties in cryptocurrency     │
+erc8004-app    | │  trading. The high confidence in observed trends justifies a fairly          │
+erc8004-app    | │  optimistic approach but should also accommodate the realities of market     │
+erc8004-app    | │  unpredictability.\\n\\n4. **Final Recommendation with Risk Disclaimer**     │
+erc8004-app    | │  \\n   Based on the review of the current price trend, key support and       │
+erc8004-app    | │  resistance levels, risk assessment, and confidence level adjustment, I      │
+erc8004-app    | │  recommend maintaining the **HOLD** position on BTC. This recommendation     │
+erc8004-app    | │  suggests that it may be prudent to refrain from making new trades at this   │
+erc8004-app    | │  moment. \\n\\n   **Risk Disclaimer:** Investors should be aware that        │
+erc8004-app    | │  trading cryptocurrencies carries significant risks and can result in        │
+erc8004-app    | │  substantial losses. This analysis reflects current market conditions;       │
+erc8004-app    | │  changes can occur rapidly and may affect previous conclusions. Before       │
+erc8004-app    | │  making any trading decisions, investors should conduct their own thorough   │
+erc8004-app    | │  research and consider their risk tolerance.\", \"metadata\":                │
+erc8004-app    | │  {\"crew_agents\": 2, \"tasks_completed\": 2, \"analysis_method\": \"CrewAI  │
+erc8004-app    | │  Multi-Agent Analysis\"}}",                                                  │
+erc8004-app    | │    "criteria": "Completeness, Methodology, Accuracy, Risk Assessment,        │
+erc8004-app    | │  Professional Standards"                                                     │
+erc8004-app    | │  }                                                                           │
+erc8004-app    | │                                                                              │
+erc8004-app    | ╰──────────────────────────────────────────────────────────────────────────────╯
+erc8004-app    | ╭──────────────────────────────── Tool Output ─────────────────────────────────╮
+erc8004-app    | │                                                                              │
+erc8004-app    | │  {                                                                           │
+erc8004-app    | │    "completeness_score": 100,                                                │
+erc8004-app    | │    "accuracy_score": 85,                                                     │
+erc8004-app    | │    "methodology_score": 100.0,                                               │
+erc8004-app    | │    "risk_assessment_score": 100,                                             │
+erc8004-app    | │    "issues_found": [],                                                       │
+erc8004-app    | │    "strengths": [                                                            │
+erc8004-app    | │      "All required fields present",                                          │
+erc8004-app    | │      "Comprehensive analysis methodology",                                   │
+erc8004-app    | │      "Includes risk assessment"                                              │
+erc8004-app    | │    ]                                                                         │
+erc8004-app    | │  }                                                                           │
+erc8004-app    | │                                                                              │
+erc8004-app    | ╰──────────────────────────────────────────────────────────────────────────────╯
+erc8004-app    | 
+erc8004-anvil  | web3_clientVersion
+erc8004-app    | 🚀 Crew: crew
+erc8004-app    | └── 📋 Task: f03e58a8-e120-4ad4-9ceb-19f16b2413f9
+erc8004-app    |     Status: Executing Task...
+erc8004-app    |     └── 🔧 Used validation_analysis (1)╭─────────────────────────── ✅ Agent Final Answer ────────────────────────────╮
+erc8004-app    | │                                                                              │
+erc8004-app    | │  Agent: Senior Analysis Validator                                            │
+erc8004-app    | │                                                                              │
+erc8004-app    | │  Final Answer:                                                               │
+erc8004-app    | │  {                                                                           │
+erc8004-app    | │    "validation_report": {                                                    │
+erc8004-app    | │      "completeness_score": 100,                                              │
+erc8004-app    | │      "accuracy_score": 85,                                                   │
+erc8004-app    | │      "methodology_score": 100,                                               │
+erc8004-app    | │      "risk_assessment_score": 100,                                           │
+erc8004-app    | │      "issues_found": [],                                                     │
+erc8004-app    | │      "strengths": [                                                          │
+erc8004-app    | │        "All required fields present",                                        │
+erc8004-app    | │        "Comprehensive analysis methodology",                                 │
+erc8004-app    | │        "Includes thorough risk assessment.",                                 │
+erc8004-app    | │        "Well-structured recommendation with risk disclaimer."                │
+erc8004-app    | │      ],                                                                      │
+erc8004-app    | │      "areas_for_improvement": [                                              │
+erc8004-app    | │        "Consider incorporating additional timeframes for a broader           │
+erc8004-app    | │  perspective on market sentiment.",                                          │
+erc8004-app    | │        "Adjust the stated confidence level to better reflect market          │
+erc8004-app    | │  volatility."                                                                │
+erc8004-app    | │      ]                                                                       │
+erc8004-app    | │    }                                                                         │
+erc8004-app    | │  }                                                                           │
+erc8004-app    | │                                                                              │
+erc8004-app    | ╰──────────────────────────────────────────────────────────────────────────────╯
+erc8004-app    | 
+erc8004-app    | 🚀 Crew: crew
+erc8004-app    | └── 📋 Task: f03e58a8-e120-4ad4-9ceb-19f16b2413f9
+erc8004-app    |     Assigned to: Senior Analysis Validator
+erc8004-app    |     Status: ✅ Completed
+erc8004-app    |     └── 🔧 Used validation_analysis (1)╭────────────────────────────── Task Completion ───────────────────────────────╮
+erc8004-app    | │                                                                              │
+erc8004-app    | │  Task Completed                                                              │
+erc8004-app    | │  Name: f03e58a8-e120-4ad4-9ceb-19f16b2413f9                                  │
+erc8004-app    | │  Agent: Senior Analysis Validator                                            │
+erc8004-app    | │  Tool Args:                                                                  │
+erc8004-app    | │                                                                              │
+erc8004-app    | │                                                                              │
+erc8004-app    | ╰──────────────────────────────────────────────────────────────────────────────╯
+erc8004-app    | 
+erc8004-app    | 🚀 Crew: crew
+erc8004-app    | ├── 📋 Task: f03e58a8-e120-4ad4-9ceb-19f16b2413f9
+erc8004-app    | │   Assigned to: Senior Analysis Validator
+erc8004-app    | │   Status: ✅ Completed
+erc8004-app    | │   └── 🔧 Used validation_analysis (1)
+erc8004-app    | └── 📋 Task: 0c0e9d72-7ea9-4f22-89ed-14ddcb4fbe5c
+erc8004-app    |     Status: Executing Task...╭────────────────────────────── 🤖 Agent Started ──────────────────────────────╮
+erc8004-app    | │                                                                              │
+erc8004-app    | │  Agent: Quality Assurance Specialist                                         │
+erc8004-app    | │                                                                              │
+erc8004-app    | │  Task:                                                                       │
+erc8004-app    | │              Review the validation assessment and provide:                   │
+erc8004-app    | │                                                                              │
+erc8004-app    | │              1. Verification of the validation methodology                   │
+erc8004-app    | │              2. Assessment of the fairness and accuracy of scores            │
+erc8004-app    | │              3. Final validation score (0-100) based on all criteria         │
+erc8004-app    | │              4. Constructive feedback for the original analysis              │
+erc8004-app    | │              5. Recommendations for improvement                              │
+erc8004-app    | │                                                                              │
+erc8004-app    | │              Ensure the validation is thorough, fair, and provides           │
+erc8004-app    | │  actionable insights.                                                        │
+erc8004-app    | │                                                                              │
+erc8004-app    | │                                                                              │
+erc8004-app    | ╰──────────────────────────────────────────────────────────────────────────────╯
+erc8004-app    | 
+erc8004-anvil  | web3_clientVersion
+erc8004-app    | 🚀 Crew: crew
+erc8004-app    | ├── 📋 Task: f03e58a8-e120-4ad4-9ceb-19f16b2413f9
+erc8004-app    | │   Assigned to: Senior Analysis Validator
+erc8004-app    | │   Status: ✅ Completed
+erc8004-app    | │   └── 🔧 Used validation_analysis (1)
+erc8004-app    | └── 📋 Task: 0c0e9d72-7ea9-4f22-89ed-14ddcb4fbe5c
+erc8004-app    |     Status: Executing Task...╭─────────────────────────── ✅ Agent Final Answer ────────────────────────────╮
+erc8004-app    | │                                                                              │
+erc8004-app    | │  Agent: Quality Assurance Specialist                                         │
+erc8004-app    | │                                                                              │
+erc8004-app    | │  Final Answer:                                                               │
+erc8004-app    | │  **Validation Assessment Report**                                            │
+erc8004-app    | │                                                                              │
+erc8004-app    | │  **1. Verification of the Validation Methodology:**                          │
+erc8004-app    | │  The methodology used in the validation report is comprehensive, as          │
+erc8004-app    | │  confirmed by a methodology score of 100. The analysis is structured and     │
+erc8004-app    | │  includes a thorough risk assessment, which reflects an understanding of     │
+erc8004-app    | │  the potential challenges faced. The methodology follows best practices,     │
+erc8004-app    | │  ensuring that the validation process is robust and sound.                   │
+erc8004-app    | │                                                                              │
+erc8004-app    | │  **2. Assessment of the Fairness and Accuracy of Scores:**                   │
+erc8004-app    | │  The scores presented in the report show a high level of accuracy, with an   │
+erc8004-app    | │  overall accuracy score of 85. This suggests a reliable assessment overall,  │
+erc8004-app    | │  but it's essential to consider potential biases or limitations within the   │
+erc8004-app    | │  data. The completeness score of 100 indicates that all necessary            │
+erc8004-app    | │  components were included, ensuring a fair evaluation. The risk assessment   │
+erc8004-app    | │  score being also at 100 further supports the fairness of the validation.    │
+erc8004-app    | │                                                                              │
+erc8004-app    | │  **3. Final Validation Score:**                                              │
+erc8004-app    | │  After considering all criteria, the final validation score is 93 out of     │
+erc8004-app    | │  100. This reflects a strong performance across all identified metrics,      │
+erc8004-app    | │  balancing strengths and areas for improvement.                              │
+erc8004-app    | │                                                                              │
+erc8004-app    | │  **4. Constructive Feedback for the Original Analysis:**                     │
+erc8004-app    | │  The original analysis demonstrates commendable thoroughness and structure.  │
+erc8004-app    | │  However, there are notable areas for enhancement. The existing strengths    │
+erc8004-app    | │  highlight the narrative's solid foundation, but the identified areas for    │
+erc8004-app    | │  improvement should be integrated strategically to elevate the analysis      │
+erc8004-app    | │  further.                                                                    │
+erc8004-app    | │                                                                              │
+erc8004-app    | │  **5. Recommendations for Improvement:**                                     │
+erc8004-app    | │  - **Incorporate Additional Timeframes:** By including various timeframes    │
+erc8004-app    | │  in the analysis, a more nuanced perspective on market sentiment can be      │
+erc8004-app    | │  achieved. This would help to better understand trends and shifts over       │
+erc8004-app    | │  time, leading to more informed decision-making.                             │
+erc8004-app    | │  - **Adjust Stated Confidence Levels:** It's crucial to revisit the          │
+erc8004-app    | │  confidence levels associated with predictions and findings to ensure they   │
+erc8004-app    | │  accurately reflect the inherent volatility within the market. Adjustments   │
+erc8004-app    | │  here can enhance the reliability of the predictive information.             │
+erc8004-app    | │                                                                              │
+erc8004-app    | │  In summary, the validation assessment is positive, with high scores across  │
+erc8004-app    | │  the majority of criteria. Future reports can benefit from incorporating     │
+erc8004-app    | │  the mentioned recommendations to strengthen the analysis even further.      │
+erc8004-app    | │                                                                              │
+erc8004-app    | ╰──────────────────────────────────────────────────────────────────────────────╯
+erc8004-app    | 
+erc8004-app    | 🚀 Crew: crew
+erc8004-app    | ├── 📋 Task: f03e58a8-e120-4ad4-9ceb-19f16b2413f9
+erc8004-app    | │   Assigned to: Senior Analysis Validator
+erc8004-app    | │   Status: ✅ Completed
+erc8004-app    | │   └── 🔧 Used validation_analysis (1)
+erc8004-app    | └── 📋 Task: 0c0e9d72-7ea9-4f22-89ed-14ddcb4fbe5c
+erc8004-app    |     Assigned to: Quality Assurance Specialist
+erc8004-app    |     Status: ✅ Completed╭────────────────────────────── Task Completion ───────────────────────────────╮
+erc8004-app    | │                                                                              │
+erc8004-app    | │  Task Completed                                                              │
+erc8004-app    | │  Name: 0c0e9d72-7ea9-4f22-89ed-14ddcb4fbe5c                                  │
+erc8004-app    | │  Agent: Quality Assurance Specialist                                         │
+erc8004-app    | │  Tool Args:                                                                  │
+erc8004-app    | │                                                                              │
+erc8004-app    | │                                                                              │
+erc8004-app    | ╰──────────────────────────────────────────────────────────────────────────────╯
+erc8004-app    | 
+erc8004-app    | ╭────────────────────────────── Crew Completion ───────────────────────────────╮
+erc8004-app    | │                                                                              │
+erc8004-app    | │  Crew Execution Completed                                                    │
+erc8004-app    | │  Name: crew                                                                  │
+erc8004-app    | │  ID: 2c6a0168-db09-4b44-b29d-a3368612195d                                    │
+erc8004-app    | │  Tool Args:                                                                  │
+erc8004-app    | │  Final Output: **Validation Assessment Report**                              │
+erc8004-app    | │                                                                              │
+erc8004-app    | │  **1. Verification of the Validation Methodology:**                          │
+erc8004-app    | │  The methodology used in the validation report is comprehensive, as          │
+erc8004-app    | │  confirmed by a methodology score of 100. The analysis is structured and     │
+erc8004-app    | │  includes a thorough risk assessment, which reflects an understanding of     │
+erc8004-app    | │  the potential challenges faced. The methodology follows best practices,     │
+erc8004-app    | │  ensuring that the validation process is robust and sound.                   │
+erc8004-app    | │                                                                              │
+erc8004-app    | │  **2. Assessment of the Fairness and Accuracy of Scores:**                   │
+erc8004-app    | │  The scores presented in the report show a high level of accuracy, with an   │
+erc8004-app    | │  overall accuracy score of 85. This suggests a reliable assessment overall,  │
+erc8004-app    | │  but it's essential to consider potential biases or limitations within the   │
+erc8004-app    | │  data. The completeness score of 100 indicates that all necessary            │
+erc8004-app    | │  components were included, ensuring a fair evaluation. The risk assessment   │
+erc8004-app    | │  score being also at 100 further supports the fairness of the validation.    │
+erc8004-app    | │                                                                              │
+erc8004-app    | │  **3. Final Validation Score:**                                              │
+erc8004-app    | │  After considering all criteria, the final validation score is 93 out of     │
+erc8004-app    | │  100. This reflects a strong performance across all identified metrics,      │
+erc8004-app    | │  balancing strengths and areas for improvement.                              │
+erc8004-app    | │                                                                              │
+erc8004-app    | │  **4. Constructive Feedback for the Original Analysis:**                     │
+erc8004-app    | │  The original analysis demonstrates commendable thoroughness and structure.  │
+erc8004-app    | │  However, there are notable areas for enhancement. The existing strengths    │
+erc8004-app    | │  highlight the narrative's solid foundation, but the identified areas for    │
+erc8004-app    | │  improvement should be integrated strategically to elevate the analysis      │
+erc8004-app    | │  further.                                                                    │
+erc8004-anvil  | eth_getBlockByNumber
+erc8004-app    | │                                                                              │
+erc8004-app    | │  **5. Recommendations for Improvement:**                                     │
+erc8004-app    | │  - **Incorporate Additional Timeframes:** By including various timeframes    │
+erc8004-app    | │  in the analysis, a more nuanced perspective on market sentiment can be      │
+erc8004-app    | │  achieved. This would help to better understand trends and shifts over       │
+erc8004-app    | │  time, leading to more informed decision-making.                             │
+erc8004-app    | │  - **Adjust Stated Confidence Levels:** It's crucial to revisit the          │
+erc8004-app    | │  confidence levels associated with predictions and findings to ensure they   │
+erc8004-app    | │  accurately reflect the inherent volatility within the market. Adjustments   │
+erc8004-app    | │  here can enhance the reliability of the predictive information.             │
+erc8004-app    | │                                                                              │
+erc8004-app    | │  In summary, the validation assessment is positive, with high scores across  │
+erc8004-app    | │  the majority of criteria. Future reports can benefit from incorporating     │
+erc8004-app    | │  the mentioned recommendations to strengthen the analysis even further.      │
+erc8004-app    | │                                                                              │
+erc8004-app    | │                                                                              │
+erc8004-app    | ╰──────────────────────────────────────────────────────────────────────────────╯
+erc8004-app    | 
+erc8004-app    | 
+erc8004-app    | 
+erc8004-app    | ╭────────────────────────────── Execution Traces ──────────────────────────────╮
+erc8004-app    | │                                                                              │
+erc8004-app    | │  🔍 Detailed execution traces are available!                                 │
+erc8004-app    | │                                                                              │
+erc8004-app    | │  View insights including:                                                    │
+erc8004-app    | │    • Agent decision-making process                                           │
+erc8004-app    | │    • Task execution flow and timing                                          │
+erc8004-app    | │    • Tool usage details                                                      │
+erc8004-app    | │                                                                              │
+erc8004-app    | ╰──────────────────────────────────────────────────────────────────────────────╯
+erc8004-app    | Would you like to view your execution traces? [y/N] (20s timeout): ✅ Validation completed with score: 85/100
+erc8004-app    | ✅ Validation completed!
+erc8004-app    |    Score: 85/100
+erc8004-app    |    Method: CrewAI Multi-Agent Validation
+erc8004-app    | 
+erc8004-app    | 📤 Bob submitting validation response...
+erc8004-app    | 📤 Submitting validation response
+erc8004-app    |    Data hash: aa9490789318f3dc253ea13d94719c4b8469e1c92c0a1fe976910bf3aa538c5c
+erc8004-app    |    Score: 85/100
+erc8004-app    | 💾 Validation package stored: validations/aa9490789318f3dc253ea13d94719c4b8469e1c92c0a1fe976910bf3aa538c5c.json
+erc8004-app    | 📊 Submitting validation response: 85/100
+erc8004-anvil  | eth_gasPrice
+erc8004-anvil  | eth_getTransactionCount
+erc8004-anvil  | eth_chainId
+erc8004-anvil  | eth_sendRawTransaction
+erc8004-anvil  | 
+erc8004-anvil  |     Transaction: 0x66c77326522d5b77a295c337704daa93616228bf742ed3fe52081558667cdb17
+erc8004-anvil  |     Gas used: 111342
+erc8004-anvil  | 
+erc8004-anvil  |     Block Number: 8
+erc8004-anvil  |     Block Hash: 0xa03d5ece733c239e2e18f3e255091b81af4e17b5b47794fcdb5a13a8845adb12
+erc8004-anvil  |     Block Time: "Sun, 19 Oct 2025 22:38:14 +0000"
+erc8004-anvil  | 
+erc8004-anvil  | eth_getTransactionReceipt
+erc8004-app    | ✅ Validation response submitted successfully
+erc8004-app    | ✅ Validation response submitted!
+erc8004-app    |    Transaction: 66c77326522d5b77a295c337704daa93616228bf742ed3fe52081558667cdb17
+erc8004-app    | 
+erc8004-app    | 💬 STEP 6: Feedback Authorization
+erc8004-app    | --------------------------------------------------
+erc8004-app    | 🔐 Alice authorizing feedback from Charlie (Agent 3)...
+erc8004-app    | 🔐 Authorizing feedback from client agent 3
+erc8004-anvil  | eth_gasPrice
+erc8004-anvil  | eth_getTransactionCount
+erc8004-anvil  | eth_chainId
+erc8004-anvil  | eth_sendRawTransaction
+erc8004-anvil  | 
+erc8004-anvil  |     Transaction: 0x93c4fad2a6c7e5dc314561d78a1b1cea3974737db0d2de2f67055e7c266598bc
+erc8004-anvil  |     Gas used: 83891
+erc8004-app    |    Transaction hash: 93c4fad2a6c7e5dc314561d78a1b1cea3974737db0d2de2f67055e7c266598bc
+erc8004-anvil  | 
+erc8004-anvil  |     Block Number: 9
+erc8004-anvil  |     Block Hash: 0x5dca6438a29b23088097596a32e18ff9acad0d0ff88413ff4662b36796a1a1da
+erc8004-anvil  |     Block Time: "Sun, 19 Oct 2025 22:38:14 +0000"
+erc8004-anvil  | 
+erc8004-anvil  | eth_getTransactionReceipt
+erc8004-app    | ✅ Feedback authorization successful
+erc8004-app    | ✅ Feedback authorization successful!
+erc8004-app    |    Transaction: 93c4fad2a6c7e5dc314561d78a1b1cea3974737db0d2de2f67055e7c266598bc
+erc8004-app    | 
+erc8004-app    | ⭐ STEP 7: Two-Way Rating System
+erc8004-app    | --------------------------------------------------
+erc8004-app    | ⭐ Alice rating Bob's validation service...
+erc8004-app    | ⭐ Rating validator (Agent 2): 95/100
+erc8004-anvil  | eth_gasPrice
+erc8004-anvil  | eth_getTransactionCount
+erc8004-anvil  | eth_chainId
+erc8004-anvil  | eth_sendRawTransaction
+erc8004-anvil  | 
+erc8004-anvil  |     Transaction: 0x10b729b9049fbc4aaf78816cb800ec782198200a492567174f98a16ea7f1f957
+erc8004-anvil  |     Gas used: 84815
+erc8004-anvil  | 
+erc8004-anvil  |     Block Number: 10
+erc8004-anvil  |     Block Hash: 0x5a31c96c8eb434559a922211aca21888e6d5ce66521a0c0ac0890abbe98fe3f6
+erc8004-anvil  |     Block Time: "Sun, 19 Oct 2025 22:38:14 +0000"
+erc8004-anvil  | 
+erc8004-anvil  | eth_getTransactionReceipt
+erc8004-app    | ✅ Validator rating submitted successfully
+erc8004-app    | ✅ Validator rating submitted!
+erc8004-app    |    Transaction: 10b729b9049fbc4aaf78816cb800ec782198200a492567174f98a16ea7f1f957
+erc8004-app    |    Bob received: 95/100 (Excellent validation service)
+erc8004-app    | 
+erc8004-app    | ⭐ Alice rating Charlie's client quality...
+erc8004-app    | ⭐ Rating client (Agent 3): 98/100
+erc8004-anvil  | eth_gasPrice
+erc8004-anvil  | eth_getTransactionCount
+erc8004-anvil  | eth_chainId
+erc8004-anvil  | eth_sendRawTransaction
+erc8004-anvil  | 
+erc8004-anvil  |     Transaction: 0xb17edc97f9d90d20a9fb0da3cf78b7f14cb974405932c52c637cc7dcaf4737b4
+erc8004-anvil  |     Gas used: 84762
+erc8004-anvil  | 
+erc8004-anvil  |     Block Number: 11
+erc8004-anvil  |     Block Hash: 0x4062dd29a9e50ef56af21c2cdac856e1beb7bac76d41f639385f9c783d2efa9e
+erc8004-anvil  |     Block Time: "Sun, 19 Oct 2025 22:38:14 +0000"
+erc8004-anvil  | 
+erc8004-anvil  | eth_getTransactionReceipt
+erc8004-app    | ✅ Client rating submitted successfully
+erc8004-app    | ✅ Client rating submitted!
+erc8004-app    |    Transaction: b17edc97f9d90d20a9fb0da3cf78b7f14cb974405932c52c637cc7dcaf4737b4
+erc8004-app    |    Charlie received: 98/100 (Excellent client - fast payment, clear communication)
+erc8004-app    | 
+erc8004-app    | 🎉 Two-way ratings completed!
+erc8004-app    |    ✅ Bob (Validator) can now build reputation based on service quality
+erc8004-app    |    ✅ Charlie (Client) can now build reputation as a good customer
+erc8004-anvil  | eth_chainId
+erc8004-app    |    ✅ This creates incentives for EVERYONE to behave professionally!
+erc8004-app    | 
+erc8004-app    | 📋 STEP 8: Complete Audit Trail
+erc8004-app    | --------------------------------------------------
+erc8004-app    | 🔗 BLOCKCHAIN AUDIT TRAIL:
+erc8004-app    |    Chain ID: 31337
+erc8004-app    |    Identity Registry: 0x5FbDB2315678afecb367f032d93F642f64180aa3
+erc8004-app    |    Reputation Registry: 0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512
+erc8004-app    |    Validation Registry: 0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0
+erc8004-app    | 
+erc8004-app    | 👥 REGISTERED AGENTS:
+erc8004-app    |    Alice (Server): ID 1 - 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+erc8004-app    |    Bob (Validator): ID 2 - 0x70997970C51812dc3A010C7d01b50e0d17dc79C8
+erc8004-app    |    Charlie (Client): ID 3 - 0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC
+erc8004-app    | 
+erc8004-app    | 📊 ANALYSIS WORK:
+erc8004-app    |    Symbol: BTC
+erc8004-app    |    Agent: alice.example.com (ID 1)
+erc8004-app    |    Timestamp: 1760913472
+erc8004-app    |    AI Method: CrewAI Multi-Agent Analysis
+erc8004-app    | 
+erc8004-app    | ✅ VALIDATION RESULTS:
+erc8004-app    |    Validator: bob.example.com (ID 2)
+erc8004-app    |    Score: 85/100
+erc8004-app    |    Timestamp: 1760913480
+erc8004-app    |    AI Method: CrewAI Multi-Agent Validation
+erc8004-app    |
+erc8004-app    | 🎯 TRUST MODELS DEMONSTRATED:
+erc8004-app    |    ✅ Identity Registry - Sovereign agent identities
+erc8004-app    |    ✅ Reputation Registry - Feedback authorization & client ratings
+erc8004-app    |    ✅ Validation Registry - Cryptoeconomic validation & validator ratings
+erc8004-app    |    ✅ Two-Way Ratings - Validators and clients get rated too
+erc8004-app    |    ✅ AI-Powered Analysis - CrewAI multi-agent workflows
+erc8004-app    |    ✅ Trustless Verification - Blockchain-based audit trail
+erc8004-app    |
+erc8004-app    | ================================================================================
+erc8004-app    | 🎉 ERC-8004 DEMO COMPLETED SUCCESSFULLY!
+erc8004-app    | ================================================================================
+erc8004-app    |
+erc8004-app    | What you just saw:
+erc8004-app    | • AI agents using CrewAI for sophisticated analysis and validation
+erc8004-app    | • Trustless interactions through ERC-8004 registries
+erc8004-app    | • Complete blockchain audit trail for accountability
+erc8004-app    | • Decentralized reputation and validation systems
+erc8004-app    | • Two-way ratings: Validators and clients get rated for quality
+erc8004-app    | • Fair reputation building for ALL participants in the economy
+erc8004-app    |
+erc8004-app    | This demonstrates the foundation for a trustless agent economy!
+erc8004-app    | ================================================================================
+erc8004-app exited with code 0
