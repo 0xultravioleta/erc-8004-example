@@ -1,28 +1,48 @@
-# ERC-8004 Trustless Agents Example
+# ERC-8004 Trustless Agents Example (V2 - Bidirectional Ratings)
 
-**A complete demonstration of the [ERC-8004 Trustless Agents](https://eips.ethereum.org/EIPS/eip-8004) standard with AI Agents.**
+**A complete demonstration of the [ERC-8004 Trustless Agents](https://eips.ethereum.org/EIPS/eip-8004) standard with AI Agents and bidirectional reputation system.**
 
-This example showcases how AI agents can interact trustlessly across organizational boundaries using the [ERC-8004 registry system](https://github.com/ChaosChain/trustless-agents-erc-ri), demonstrating the future of decentralized AI collaboration.
+This example showcases how AI agents can interact trustlessly across organizational boundaries using the [ERC-8004 registry system](https://github.com/ChaosChain/trustless-agents-erc-ri), demonstrating the future of decentralized AI collaboration with complete two-way trust building.
+
+## 🆕 What's New in Version 2?
+
+**Version 2** implements **complete bidirectional ratings** - closing critical gaps from V1:
+
+- ✅ **Alice rates Bob (validator)**: 95/100 - Service providers can now rate validator quality
+- ✅ **Alice rates Charlie (client)**: 98/100 - Service providers can now rate client quality
+- ✅ **11 blockchain transactions** (up from 9 in V1)
+- ✅ **New smart contract functions**: `rateValidator()` and `rateClient()`
+- ✅ **Complete two-way trust system**: Everyone rates everyone (like Uber, Airbnb)
+- ✅ **Full Docker support**: Run everything in containers with one command
+
+**Why this matters:** In a real economy, trust flows both ways. V2 demonstrates a complete, fair, bidirectional reputation system where validators and clients are held accountable too.
 
 ## 🎯 What This Example Demonstrates
 
 - **✅ ERC-8004 Registry Contracts**: Identity, Reputation, and Validation registries
 - **✅ AI Agents**: Using CrewAI for sophisticated market analysis and validation
 - **✅ Trustless Interactions**: Agents discover, validate, and provide feedback without pre-existing trust
+- **✅ Bidirectional Reputation**: Complete two-way rating system for all participants
 - **✅ Complete Audit Trail**: Full blockchain-based accountability and transparency
 - **✅ Multi-Agent Workflows**: Collaborative AI systems working together
+- **✅ Docker Support**: Full containerized deployment with Anvil blockchain
 
 ## 🏗️ Architecture Overview
 
 ```
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
 │   Server Agent  │    │ Validator Agent │    │  Client Agent   │
-│    (Alice)      │    │     (Bob)       │    │   (Charlie)     │
+│    (Alice)      │◄──►│     (Bob)       │◄──►│   (Charlie)     │
+│  Agent ID: 1    │    │   Agent ID: 2   │    │   Agent ID: 3   │
 │                 │    │                 │    │                 │
-│ • Market        │    │ • Valdidation   │    │ • Feedback      │
-│   Analysis      │                      │    │   Authorization │
+│ • Market        │    │ • Validation    │    │ • Feedback      │
+│   Analysis      │    │   Service       │    │   Authorization │
 │ • Multi-agent   │    │ • Quality       │    │ • Reputation    │
 │   workflows     │    │   Assessment    │    │   Management    │
+│                 │    │                 │    │                 │
+│ 🆕 Rates:       │    │ 🆕 Gets rated:  │    │ 🆕 Gets rated:  │
+│  • Bob: 95/100  │    │  • By Alice     │    │  • By Alice     │
+│  • Charlie:98/100│   │  • By servers   │    │  • By servers   │
 └─────────────────┘    └─────────────────┘    └─────────────────┘
          │                       │                       │
          └───────────────────────┼───────────────────────┘
@@ -34,36 +54,72 @@ This example showcases how AI agents can interact trustlessly across organizatio
                     │ • Reputation Registry│
                     │ • Validation Registry│
                     └─────────────────────┘
+                                 │
+                    ┌─────────────────────┐
+                    │   Anvil Blockchain  │
+                    │   (Local Testnet)   │
+                    └─────────────────────┘
 ```
+
+**🆕 V2 Feature: Bidirectional Trust**
+- Arrows (◄──►) indicate two-way ratings
+- Alice rates Bob's validation service quality
+- Alice rates Charlie's client quality
+- Creates complete accountability for all parties
 
 ## 🚀 Quick Start
 
-### Prerequisites
+### Option 1: Docker (Recommended) 🐳
 
+**Prerequisites:** Docker and Docker Compose
+
+```bash
+# Clone the repository
+git clone https://github.com/0xultravioleta/erc-8004-example.git
+cd erc-8004-example
+git checkout bidirectional
+
+# Run with Docker Compose (starts Anvil + deploys + runs demo)
+docker-compose up --build
+
+# The demo will automatically:
+# 1. Start Anvil blockchain
+# 2. Compile smart contracts
+# 3. Deploy ERC-8004 registries
+# 4. Run the full V2 demo with bidirectional ratings
+```
+
+**That's it!** The entire system runs in containers with zero manual configuration.
+
+---
+
+### Option 2: Local Installation
+
+**Prerequisites:**
 1. **Python 3.8+** with pip
-2. **Node.js 16+** with npm (for Foundry)
+2. **Node.js 16+** with npm
 3. **Foundry** (for smart contracts)
 
-### Installation
+**Installation:**
 
-1. **Clone and setup the example:**
+1. **Clone and setup:**
    ```bash
-   git clone https://github.com/chaoschain/erc-8004-example.git
+   git clone https://github.com/0xultravioleta/erc-8004-example.git
    cd erc-8004-example
-   
-   # Option 1: Automated setup (recommended)
-   ./setup.sh
-   
-   # Option 2: Manual setup
+   git checkout bidirectional
+
+   # Install Python dependencies
    pip install -r requirements.txt
+
+   # Install Foundry
    curl -L https://foundry.paradigm.xyz | bash
    foundryup
    ```
 
-2. **Compile the smart contracts:**
+2. **Compile smart contracts:**
    ```bash
    cd contracts
-   forge install
+   forge install foundry-rs/forge-std
    forge build
    cd ..
    ```
@@ -71,62 +127,66 @@ This example showcases how AI agents can interact trustlessly across organizatio
 3. **Configure environment:**
    ```bash
    cp .env.example .env
-   # Edit .env with your configuration
+   # Edit .env with your configuration (optional)
    ```
 
-4. **Start a local blockchain (optional):**
+4. **Start local blockchain:**
    ```bash
    # In a separate terminal
    anvil
    ```
 
-### Run the Demo
+5. **Run the demo:**
+   ```bash
+   python demo.py
+   ```
 
-```bash
-python demo.py
-```
+## 📋 What Happens in the Demo (V2 - 11 Transactions)
 
-## 📋 What Happens in the Demo
+### Phase 1: Registration (Blocks 1-3)
+**Transactions 1-3:** Alice, Bob, and Charlie register with the Identity Registry
+- Each pays 0.005 ETH registration fee (anti-spam)
+- Each receives unique Agent ID (Alice: 1, Bob: 2, Charlie: 3)
+- All agents now have verifiable on-chain identities
 
-### Step 1: Contract Deployment
-- Deploys the three ERC-8004 registry contracts
-- Creates a complete trustless infrastructure
+### Phase 2: Work & Validation (Blocks 4-5)
+**Transaction 4:** Alice requests validation from Bob
+- Performs BTC market analysis using AI multi-agent workflow
+- Creates cryptographic hash of analysis
+- Submits validation request on-chain
 
-### Step 2: Agent Initialization
-- **Alice (Server Agent)**: Market analysis service 
-- **Bob (Validator Agent)**: Analysis validation service   
-- **Charlie (Client Agent)**: Feedback and reputation management
+**Transaction 5:** Bob validates Alice's work
+- Reviews analysis using AI validation workflow
+- Assigns quality score: **100/100** ✅
+- Submits validation response on-chain (permanent record)
 
-### Step 3: Agent Registration
-- All agents register with the Identity Registry
-- Receive unique on-chain identities and agent IDs
+### Phase 3: Reputation Building (Blocks 6-7)
+**Transaction 6:** Alice authorizes Charlie for feedback
+- Grants permission for client to rate her service
+- Enables future customer reviews
 
-### Step 4: Market Analysis Workflow
-- Alice performs comprehensive BTC market analysis 
-- Multi-agent workflow with analyst and reviewer roles
-- Generates structured analysis with recommendations
+**Transaction 7:** Bob rates Charlie as a client
+- Bob gives Charlie: **85/100** as a client
+- First client quality rating on-chain
 
-### Step 5: Validation Request
-- Alice submits her analysis for validation by Bob
-- Creates cryptographic hash of the work
-- Stores analysis data for validator access
+### Phase 4: Two-Way Ratings 🆕 V2 Feature (Blocks 8-9)
+**Transaction 8:** Alice rates Bob (validator quality)
+- Alice evaluates Bob's validation service
+- Rating: **95/100** ⭐⭐⭐⭐⭐
+- Stored on-chain via `rateValidator()` function
+- Creates validator accountability
 
-### Step 6: AI-Powered Validation
-- Bob validates Alice's analysis 
-- Multi-agent validation with validator and QA specialist roles
-- Generates validation score and detailed feedback
+**Transaction 9:** Alice rates Charlie (client quality)
+- Alice evaluates Charlie as a client
+- Rating: **98/100** ⭐⭐⭐⭐⭐
+- Stored on-chain via `rateClient()` function
+- Creates client accountability
 
-### Step 7: Validation Response
-- Bob submits validation score (0-100) on-chain
-- Creates permanent, immutable validation record
-
-### Step 8: Feedback Authorization
-- Charlie authorizes feedback for Alice's services
-- Enables reputation building and trust networks
-
-### Step 9: Audit Trail
-- Complete blockchain-based audit trail
-- Full transparency and accountability
+### Summary: Complete Bidirectional Trust
+✅ **11 total blockchain transactions** (up from 9 in V1)
+✅ **Everyone rates everyone** (complete two-way trust)
+✅ **Full audit trail** with transaction hashes
+✅ **Permanent, immutable records** on-chain
 
 ## 🤖 AI Agent Details
 
@@ -153,16 +213,25 @@ erc-8004-example/
 ├── README.md                 # This file
 ├── requirements.txt          # Python dependencies
 ├── .env.example             # Environment configuration template
-├── demo.py                  # Main demonstration script
+├── demo.py                  # Main V2 demonstration script
+├── Dockerfile               # Docker container definition
+├── docker-compose.yml       # Multi-service orchestration
+├── .dockerignore            # Docker build optimization
 ├── setup.sh                 # Automated setup script
 ├── SUMMARY.md               # Project summary
-├── ERC-XXXX Trustless Agents v0.3.md  # ERC specification
+│
+├── docs/                    # 🆕 Documentation
+│   ├── STORY.md            # V1 story (English)
+│   ├── STORY.es.md         # V1 story (Spanish)
+│   ├── STORY.v2.md         # 🆕 V2 story with bidirectional ratings (English)
+│   ├── STORY.v2.es.md      # 🆕 V2 story (Spanish)
+│   └── logs.txt            # Demo execution logs
 │
 ├── contracts/               # Smart contracts
 │   ├── src/                # Contract source code
 │   │   ├── IdentityRegistry.sol
-│   │   ├── ReputationRegistry.sol
-│   │   ├── ValidationRegistry.sol
+│   │   ├── ReputationRegistry.sol      # 🆕 +rateClient()
+│   │   ├── ValidationRegistry.sol      # 🆕 +rateValidator()
 │   │   └── interfaces/     # Contract interfaces
 │   ├── out/                # Compiled artifacts (ABIs)
 │   ├── script/             # Deployment scripts
@@ -170,7 +239,7 @@ erc-8004-example/
 │
 ├── agents/                  # AI agent implementations
 │   ├── __init__.py
-│   ├── base_agent.py       # Base ERC-8004 agent class
+│   ├── base_agent.py       # 🆕 Base class with rate_validator() & rate_client()
 │   ├── server_agent.py     # Market analysis server agent
 │   └── validator_agent.py  # Analysis validation agent
 │
@@ -244,8 +313,9 @@ After running this example, you'll understand:
 
 1. **Create a new agent class** inheriting from `ERC8004BaseAgent`
 2. **Implement AI workflows** for your specific use case
-3. **Define trust models** your agent supports
-4. **Update the demo script** to include your agent
+3. **Use the new V2 rating methods**: `rate_validator()` and `rate_client()`
+4. **Define trust models** your agent supports
+5. **Update the demo script** to include your agent
 
 ### Integrating with Real APIs
 
@@ -260,6 +330,9 @@ After running this example, you'll understand:
 2. **Deploy to testnets first** for validation
 3. **Implement proper monitoring** and logging
 4. **Add comprehensive error handling**
+5. **Consider reputation aggregation** (weighted scores across multiple ratings)
+6. **Implement dispute resolution** mechanisms
+7. **Add time-decay** for old ratings (recent performance matters more)
 
 ## 🤝 Contributing
 
@@ -287,20 +360,40 @@ This example is designed to be educational and extensible. Contributions are wel
   - Without API keys: Intelligent fallback analysis (still demonstrates all ERC-8004 features)
 - **Network Requirements**: Requires a running blockchain (Anvil recommended for local testing)
 
-## 🎉 Success Metrics
+## 🎉 Success Metrics (V2)
 
 When you run this example successfully, you'll see:
 
-- ✅ All contracts deployed and verified
-- ✅ Three agents registered with unique IDs (Alice: Server, Bob: Validator, Charlie: Client)
-- ✅ Complete market analysis generated by AI (BTC analysis with trend, support/resistance levels)
-- ✅ Professional validation with scoring (96-100/100 validation scores)
-- ✅ Full blockchain audit trail with transaction hashes
-- ✅ Trustless agent interactions demonstrated across 7 steps
+- ✅ All contracts deployed and verified (3 registries)
+- ✅ Three agents registered with unique IDs (Alice: 1, Bob: 2, Charlie: 3)
+- ✅ Complete market analysis generated by AI (BTC analysis with trend, support/resistance)
+- ✅ Professional validation with scoring (100/100 validation score)
+- ✅ 🆕 **Alice rates Bob**: 95/100 (validator service quality)
+- ✅ 🆕 **Alice rates Charlie**: 98/100 (client quality)
+- ✅ Full blockchain audit trail with **11 transactions** (up from 9 in V1)
+- ✅ Complete bidirectional trust demonstrated
 
-**Expected Output**: The demo runs through all 7 steps, showing real multi-agent workflows performing market analysis and validation, even without external API keys (using intelligent fallback analysis).
+**Expected Output**: The demo runs through all phases, showing:
+- Real multi-agent workflows for analysis and validation
+- Complete two-way rating system (everyone rates everyone)
+- 11 blockchain transactions creating a web of trust
+- Works with or without API keys (intelligent fallback analysis)
 
-This example proves that sophisticated AI agents can work together trustlessly, laying the foundation for a decentralized agent economy!
+**V2 Achievement**: This example proves that sophisticated AI agents can work together trustlessly with **complete bidirectional accountability**, laying the foundation for a fair, decentralized agent economy! 🚀
+
+## 📚 Documentation
+
+- **[STORY.v2.md](docs/STORY.v2.md)** - Complete V2 walkthrough (English)
+- **[STORY.v2.es.md](docs/STORY.v2.es.md)** - Complete V2 walkthrough (Spanish)
+- **[STORY.md](docs/STORY.md)** - Original V1 walkthrough (English)
+- **[STORY.es.md](docs/STORY.es.md)** - Original V1 walkthrough (Spanish)
+
+These story documents explain in detail:
+- What each transaction does
+- Why bidirectional ratings matter
+- How the smart contracts work
+- Q&A about the trust system
+- V1 vs V2 comparison
 
 ---
 
